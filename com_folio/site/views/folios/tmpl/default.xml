@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_folio_folios_view_default_title" option="com_folio_folios_view_default_option">
+	<message>
+		<![CDATA[com_folio_folios_view_default_desc]]>
+	</message>
+	</layout>
+</metadata>

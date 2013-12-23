@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_
+		LABEL"
+		readonly="true" class="readonly"
+		description="JGLOBAL_FIELD_ID_DESC"/>
+		<field name="title" type="text" class="inputbox"
+		size="40" label="JGLOBAL_TITLE"
+		description="COM_FOLIO_FIELD_TITLE_DESC" required="true" />
+		<field name="alias" type="text" class="inputbox"
+		size="40" label="JFIELD_ALIAS_LABEL"
+		description="COM_FOLIO_FIELD_ALIAS_DESC" />
+
+		<field
+		name="catid"
+		type="category"
+		extension="com_folio"
+		class="inputbox"
+		default=""
+		label="COM_FOLIO_FIELD_CATID_LABEL"
+		description="COM_FOLIO_FIELD_CATID_DESC"
+		>
+		<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		<field name="state" type="list"
+		label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+		class="inputbox small" size="1" default="1" >
+		<option value="1">JPUBLISHED</option>
+		<option value="0">JUNPUBLISHED</option>
+		<option value="2">JARCHIVED</option>
+		<option value="-2">JTRASHED</option>
+		</field>
+		<field name="image" type="media" directory=""
+		hide_none="1" label="COM_FOLIO_FIELD_IMAGE_LABEL"
+		size="40"
+		description="COM_FOLIO_FIELD_IMAGE_DESC" 
+		/>
+
+		<field name="company" type="text" class="inputbox"
+		size="40" label="COM_FOLIO_FIELD_COMPANY_LABEL"
+		description="COM_FOLIO_FIELD_COMPANY_DESC" required="true" /> 
+		<field
+		name="phone"
+		type="tel"
+		id="phone"
+		description="COM_FOLIO_FIELD_PHONE_DESC"
+		filter="string"
+		label="COM_FOLIO_FIELD_PHONE_LABEL"
+		size="30"
+		validate="tel"
+		/>
+		<field name="url" type="text"
+		description="COM_FOLIO_FIELD_URL_DESC"
+		label="COM_FOLIO_FIELD_URL_LABEL"
+		size="40"
+		maxlength="255"
+		/>
+		<field name="description" type="textarea" class="inputbox"
+		rows="3" cols="30" label="JGLOBAL_DESCRIPTION"
+		description="COM_FOLIO_FIELD_DESCRIPTION_DESC" />
+	</fieldset>
+</form>

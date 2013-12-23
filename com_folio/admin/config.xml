@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component"
+	label="COM_FOLIO_COMPONENT_LABEL"
+	description="COM_FOLIO_COMPONENT_DESC"
+	>
+	<field name="target" type="list"
+	default="0"
+	description="COM_FOLIO_FIELD_TARGET_DESC"
+	label="COM_FOLIO_FIELD_TARGET_LABEL"
+	>
+	<option value="0">JBROWSERTARGET_PARENT</option>
+	<option value="1">JBROWSERTARGET_NEW</option>
+	<option value="2">JBROWSERTARGET_POPUP</option>
+	<option value="3">JBROWSERTARGET_MODAL</option>
+	</field>
+
+	</fieldset>
+	<fieldset name="permissions"
+	description="JCONFIG_PERMISSIONS_DESC"
+	label="JCONFIG_PERMISSIONS_LABEL"
+	>
+	<field name="rules" type="rules"
+	component="com_folio"
+	filter="rules"
+	validate="rules"
+	label="JCONFIG_PERMISSIONS_LABEL"
+	section="component" />
+	</fieldset>
+</config>

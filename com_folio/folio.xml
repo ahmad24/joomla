@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_folio</name>
+	<author>Tim Plummer</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>(C) 2013 Packt Publishing. All rights reserved.
+	</copyright>
+	<license>GNU General Public License version 2 or later; seeLICENSE.txt</license>
+	<authorEmail>example@packtpub.com</authorEmail>
+	<authorUrl>www.packtpub.com</authorUrl>
+	<version>1.7.0</version>
+	<description>COM_FOLIO_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<install>
+		<sql>
+		<file driver="mysql"  charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>folio.php</filename>
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		
+	</files>
+	<media destination="com_folio" folder="media">
+		<filename>index.html</filename>
+		<folder>css</folder>
+	</media>
+	<administration>
+		<menu img="class:categories">COM_FOLIO_MENU</menu>
+			<submenu>
+			<menu link="option=com_folio"
+			view="folios" img="class:generic"
+			alt="Folio/Folios">com_folio_folios</menu> 
+			<menu link="option=com_categories&amp;extension=com_folio"
+			view="categories" img="class:categories"
+			alt="Folio/Categories">com_folio_categories
+			</menu>
+			<menu link="option=com_folio&amp;view=preview"
+			img="class:generic"
+			alt="Folio/Preview">com_folio_preview</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>folio.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_folio.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_folio.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
